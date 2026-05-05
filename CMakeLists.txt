@@ -23,6 +23,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(projeto_trem
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        trem.h
+        trem.h trem.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET projeto_trem APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
