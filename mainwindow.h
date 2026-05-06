@@ -21,6 +21,14 @@ public:
 public slots:
     void updateInterface(int, int, int);
 
+private slots:
+    void on_slider_T1_valueChanged(int value);
+    void on_slider_T2_valueChanged(int value);
+    void on_slider_T3_valueChanged(int value);
+    void on_slider_T4_valueChanged(int value);
+    void on_slider_T5_valueChanged(int value);
+    void on_slider_T6_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
 

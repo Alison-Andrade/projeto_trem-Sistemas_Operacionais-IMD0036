@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     trem[5] = new Trem(6, 440, 330);
 
     for (int i = 0; i < 6; ++i) {
-        connect(trem[i], SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
+        connect(trem[i], SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int,int,int)));
     }
 
     for (int i = 0; i < 6; ++i) {
@@ -53,5 +53,38 @@ void MainWindow::updateInterface(int id, int x, int y) {
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+
+
+void MainWindow::on_slider_T1_valueChanged(int value)
+{
+    trem[0]->setVelocidade(value);
+}
+
+void MainWindow::on_slider_T2_valueChanged(int value)
+{
+    trem[1]->setVelocidade(value);
+}
+
+void MainWindow::on_slider_T3_valueChanged(int value)
+{
+    trem[2]->setVelocidade(value);
+}
+
+void MainWindow::on_slider_T4_valueChanged(int value)
+{
+    trem[3]->setVelocidade(value);
+}
+
+void MainWindow::on_slider_T5_valueChanged(int value)
+{
+    trem[4]->setVelocidade(value);
+}
+
+void MainWindow::on_slider_T6_valueChanged(int value)
+{
+    trem[5]->setVelocidade(value);
 }
 

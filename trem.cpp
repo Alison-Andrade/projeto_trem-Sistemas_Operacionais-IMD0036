@@ -8,84 +8,86 @@ Trem::Trem(int ID, int x, int y) {
     velocidade = 100;
 }
 
+void Trem::setVelocidade(int velocidade) {
+    this->velocidade = velocidade;
+}
+
 void Trem::run() {
     while(true) {
-        switch (ID) {
-        case 1:
-            if (y == 10 && x < 170) {
-                x+=10;
-            } else if (x == 170 && y < 160) {
-                y+=10;
-            } else if (y == 160 && x > 10) {
-                x-=10;
-            } else {
-                y-=10;
+        if(velocidade > 0) {
+            switch (ID) {
+            case 1:
+                if (y == 10 && x < 170) {
+                    x+=10;
+                } else if (x == 170 && y < 160) {
+                    y+=10;
+                } else if (y == 160 && x > 10) {
+                    x-=10;
+                } else {
+                    y-=10;
+                }
+                break;
+            case 2:
+                if (y == 10 && x < 350) {
+                    x+=10;
+                } else if (x == 350 && y < 230) {
+                    y+=10;
+                } else if (y == 230 && x > 170) {
+                    x-=10;
+                } else {
+                    y-=10;
+                }
+                break;
+            case 3:
+                if (y == 10 && x < 520) {
+                    x+=10;
+                } else if (x == 520 && y < 160) {
+                    y+=10;
+                } else if (y == 160 && x > 350) {
+                    x-=10;
+                } else {
+                    y-=10;
+                }
+                break;
+            case 4:
+                if (y == 160 && x < 170) {
+                    x+=10;
+                } else if (x == 170 && y < 330) {
+                    y+=10;
+                } else if (y == 330 && x > 10) {
+                    x-=10;
+                } else {
+                    y-=10;
+                }
+                break;
+            case 5:
+                if (y == 230 && x < 350) {
+                    x+=10;
+                } else if (x == 350 && y < 330) {
+                    y+=10;
+                } else if (y == 330 && x > 170) {
+                    x-=10;
+                } else {
+                    y-=10;
+                }
+                break;
+            case 6:
+                if (y == 160 && x < 520) {
+                    x+=10;
+                } else if (x == 520 && y < 330) {
+                    y+=10;
+                } else if (y == 330 && x > 350) {
+                    x-=10;
+                } else {
+                    y-=10;
+                }
+                break;
+            default:
+                break;
             }
             emit updateGUI(ID, x, y);
-            break;
-        case 2:
-            if (y == 10 && x < 350) {
-                x+=10;
-            } else if (x == 350 && y < 230) {
-                y+=10;
-            } else if (y == 230 && x > 170) {
-                x-=10;
-            } else {
-                y-=10;
-            }
-            emit updateGUI(ID, x, y);
-            break;
-        case 3:
-            if (y == 10 && x < 520) {
-                x+=10;
-            } else if (x == 520 && y < 160) {
-                y+=10;
-            } else if (y == 160 && x > 350) {
-                x-=10;
-            } else {
-                y-=10;
-            }
-            emit updateGUI(ID, x, y);
-            break;
-        case 4:
-            if (y == 160 && x < 170) {
-                x+=10;
-            } else if (x == 170 && y < 330) {
-                y+=10;
-            } else if (y == 330 && x > 10) {
-                x-=10;
-            } else {
-                y-=10;
-            }
-            emit updateGUI(ID, x, y);
-            break;
-        case 5:
-            if (y == 230 && x < 350) {
-                x+=10;
-            } else if (x == 350 && y < 330) {
-                y+=10;
-            } else if (y == 330 && x > 170) {
-                x-=10;
-            } else {
-                y-=10;
-            }
-            emit updateGUI(ID, x, y);
-            break;
-        case 6:
-            if (y == 160 && x < 520) {
-                x+=10;
-            } else if (x == 520 && y < 330) {
-                y+=10;
-            } else if (y == 330 && x > 350) {
-                x-=10;
-            } else {
-                y-=10;
-            }
-            emit updateGUI(ID, x, y);
-            break;
-        default:
-            break;
         }
-        msleep(velocidade);
+        int tempo = (velocidade == 0) ? 200 : (200-velocidade);
+        msleep(tempo);
     }
 }

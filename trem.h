@@ -9,6 +9,7 @@ class Trem : public QThread
 public:
     Trem(int, int, int);
     void run();
+    void setVelocidade(int);
 
 signals:
     void updateGUI(int, int, int);
