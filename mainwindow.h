@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "trem.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +18,12 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
 
+public slots:
+    void updateInterface(int, int, int);
+
 private:
     Ui::MainWindow *ui;
+
+    Trem *trem[6];
 };
 #endif // MAINWINDOW_H
