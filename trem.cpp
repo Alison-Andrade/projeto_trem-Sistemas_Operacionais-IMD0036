@@ -1,6 +1,8 @@
 #include "trem.h"
 #include <QtCore>
 
+extern QMutex m[9];
+
 Trem::Trem(int ID, int x, int y) {
     this->ID = ID;
     this->x = x;
@@ -18,13 +20,17 @@ void Trem::run() {
             switch (ID) {
             case 1:
                 if (y == 10 && x < 170) {
+                    if (x == 150) m[0].lock();
                     x+=10;
                 } else if (x == 170 && y < 160) {
+                    if (y == 140) m[1].lock();
                     y+=10;
                 } else if (y == 160 && x > 10) {
                     x-=10;
+                    if (x == 150) m[0].unlock();
                 } else {
                     y-=10;
+                    if (y == 140) m[1].unlock();
                 }
                 break;
             case 2:
@@ -36,6 +42,8 @@ void Trem::run() {
                     x-=10;
                 } else {
                     y-=10;
+                    if (y == 170) m[0].lock();
+                    if (y == 10) m[0].unlock();
                 }
                 break;
             case 3:

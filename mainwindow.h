@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMutex>
 #include "trem.h"
 
 QT_BEGIN_NAMESPACE
