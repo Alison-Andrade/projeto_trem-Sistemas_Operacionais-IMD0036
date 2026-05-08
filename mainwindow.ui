@@ -196,6 +196,9 @@
     <property name="text">
      <string>T1</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label_T2">
     <property name="geometry">
@@ -212,6 +215,9 @@
     </property>
     <property name="text">
      <string>T2</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_T3">
@@ -230,6 +236,9 @@
     <property name="text">
      <string>T3</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label_T6">
     <property name="geometry">
@@ -246,6 +255,9 @@
     </property>
     <property name="text">
      <string>T6</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_T5">
@@ -264,6 +276,9 @@
     <property name="text">
      <string>T5</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label_T4">
     <property name="geometry">
@@ -281,12 +296,15 @@
     <property name="text">
      <string>T4</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QSlider" name="slider_T1">
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>20</y>
+      <y>21</y>
       <width>341</width>
       <height>16</height>
      </rect>
@@ -317,7 +335,7 @@
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>50</y>
+      <y>51</y>
       <width>341</width>
       <height>16</height>
      </rect>
@@ -342,7 +360,7 @@
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>80</y>
+      <y>81</y>
       <width>341</width>
       <height>16</height>
      </rect>
@@ -367,7 +385,7 @@
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>110</y>
+      <y>111</y>
       <width>341</width>
       <height>16</height>
      </rect>
@@ -392,9 +410,9 @@
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>140</y>
+      <y>141</y>
       <width>341</width>
-      <height>16</height>
+      <height>10</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -423,7 +441,7 @@
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>170</y>
+      <y>171</y>
       <width>341</width>
       <height>16</height>
      </rect>
@@ -442,6 +460,127 @@
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_T1_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>20</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: green
+;
+</string>
+    </property>
+    <property name="text">
+     <string>T1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_T2_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>50</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: red;
+</string>
+    </property>
+    <property name="text">
+     <string>T2</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_T3_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>80</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: blue;
+</string>
+    </property>
+    <property name="text">
+     <string>T3</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_T4_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>110</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: orange;
+</string>
+    </property>
+    <property name="text">
+     <string>T4</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_T5_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>140</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: cyan;
+</string>
+    </property>
+    <property name="text">
+     <string>T5</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_T6_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>170</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: purple;
+</string>
+    </property>
+    <property name="text">
+     <string>T6</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
   </widget>
