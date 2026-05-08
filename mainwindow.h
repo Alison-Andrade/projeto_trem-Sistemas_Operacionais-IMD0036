@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMutex>
+#include <QSemaphore>
 #include "trem.h"
 
 QT_BEGIN_NAMESPACE

@@ -2,6 +2,8 @@
 #include "./ui_mainwindow.h"
 
 QMutex m[9];
+QSemaphore semaforo_d(2);
+QSemaphore semaforo_e(2);
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)

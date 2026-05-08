@@ -3,6 +3,11 @@
 
 #include <QThread>
 #include <QMutex>
+#include <QSemaphore>
+
+extern QMutex m[9];
+extern QSemaphore semaforo_d;
+extern QSemaphore semaforo_e;
 
 class Trem : public QThread
 {
