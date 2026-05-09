@@ -4,7 +4,7 @@ Trem::Trem(int ID, int x, int y) {
     this->ID = ID;
     this->x = x;
     this->y = y;
-    velocidade = 100;
+    velocidade = 0;
 }
 
 void Trem::setVelocidade(int velocidade) {
@@ -39,7 +39,6 @@ void Trem::run() {
             case 2:
                 if (y == 10 && x < 350) {
                     if (x == 190) {
-                        semaforo_e.release(1);
                         m[0].unlock();
                     }
                     if (x == 330) {
@@ -58,16 +57,20 @@ void Trem::run() {
                     if (x == 190) m[4].lock();
                     x-=10;
                     if (x == 330) {
+                        semaforo_d.release(1);
                         m[1].unlock();
-                        m[5].unlock();}
+                        m[5].unlock();
+                    }
                 } else {
                     if (y == 180) m[0].lock();
                     y-=10;
                     if (y == 210) {
-                        semaforo_d.release(1);
                         m[7].unlock();
                     }
-                    if (y == 140) m[4].unlock();
+                    if (y == 140) {
+                        semaforo_e.release(1);
+                        m[4].unlock();
+                    }
                 }
                 break;
             case 3:
@@ -99,11 +102,13 @@ void Trem::run() {
                     if (y == 170) m[6].lock();
                     y+=10;
                     if (y == 180) m[2].unlock();
-                    if (y == 250) m[4].unlock();
+                    if (y == 250) {
+                        semaforo_e.release(1);
+                        m[4].unlock();
+                    }
                 } else if (y == 330 && x > 10) {
                     x-=10;
                     if (x == 150) {
-                        semaforo_e.release(1);
                         m[6].unlock();
                     }
                 } else {

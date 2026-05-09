@@ -324,8 +324,11 @@
     <property name="maximum">
      <number>200</number>
     </property>
+    <property name="value">
+     <number>0</number>
+    </property>
     <property name="sliderPosition">
-     <number>100</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
@@ -349,8 +352,11 @@
     <property name="maximum">
      <number>200</number>
     </property>
+    <property name="value">
+     <number>0</number>
+    </property>
     <property name="sliderPosition">
-     <number>100</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
@@ -374,8 +380,11 @@
     <property name="maximum">
      <number>200</number>
     </property>
+    <property name="value">
+     <number>0</number>
+    </property>
     <property name="sliderPosition">
-     <number>100</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
@@ -399,8 +408,11 @@
     <property name="maximum">
      <number>200</number>
     </property>
+    <property name="value">
+     <number>0</number>
+    </property>
     <property name="sliderPosition">
-     <number>100</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
@@ -424,8 +436,11 @@
     <property name="maximum">
      <number>200</number>
     </property>
+    <property name="value">
+     <number>0</number>
+    </property>
     <property name="sliderPosition">
-     <number>100</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
@@ -455,8 +470,11 @@
     <property name="maximum">
      <number>200</number>
     </property>
+    <property name="value">
+     <number>0</number>
+    </property>
     <property name="sliderPosition">
-     <number>100</number>
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
@@ -583,27 +601,6 @@
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_T1_3">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>160</y>
-      <width>21</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: green
-;
-</string>
-    </property>
-    <property name="text">
-     <string>T1</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -611,7 +608,7 @@
      <x>0</x>
      <y>0</y>
      <width>990</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
