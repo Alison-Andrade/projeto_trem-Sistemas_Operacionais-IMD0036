@@ -25,6 +25,14 @@ private:
     int y;
     int ID;
     int velocidade;
+
+    void moverTrem1();
+    void moverTrem2();
+    void moverTrem3();
+    void moverTrem4();
+    void moverTrem5();
+    void moverTrem6();
+
 };
 
 #endif // TREM_H
